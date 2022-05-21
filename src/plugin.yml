@@ -1,0 +1,7 @@
+main: com.cpmason.nebuhc.NeBUhc
+name: neBUhc
+version: 1.0
+description: A plugin that adds scenarios to UhcCore.
+api-version: 1.16
+author: cpmason
+depend: [UhcCore]
