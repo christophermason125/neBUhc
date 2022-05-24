@@ -1,0 +1,19 @@
+{
+  "glowing": {
+    "name": "Glowing",
+    "material": "GLOWSTONE",
+    "listener": "GlowingListener",
+    "description": [
+      "All players are given the glowing effect once the border stops shrinking.",
+      "This means that they can be seen through walls even if they are not crouching."
+    ]
+  },
+  "phantomless": {
+    "name": "Phantomless",
+    "material": "PHANTOM_MEMBRANE",
+    "listener": "PhantomlessListener",
+    "description": [
+      "Phantoms are disabled."
+    ]
+  }
+}
