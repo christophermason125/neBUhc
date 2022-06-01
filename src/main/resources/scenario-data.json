@@ -15,5 +15,14 @@
     "description": [
       "Phantoms are disabled."
     ]
+  },
+  "normalized_mob_cap": {
+    "name": "Normalized Mob Cap",
+    "material": "CREEPER_HEAD",
+    "listener": "NormalizedMobCapListener",
+    "description": [
+      "Adjusts the vanilla mob spawning algorithm to ensure that mobs spawn at the same rate regardless of how close they are to the border",
+      "By default, mobs are more likely to spawn near to border."
+    ]
   }
 }

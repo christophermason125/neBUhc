@@ -12,6 +12,6 @@ public class GreetingListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        event.setJoinMessage(CHAT_HANDLE + GREETING);
+        event.getPlayer().sendMessage(CHAT_HANDLE + GREETING);
     }
 }

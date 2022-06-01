@@ -1,9 +1,13 @@
 package com.cpmason.nebuhc;
 
+import com.cpmason.nebuhc.events.BorderFinishedEvent;
 import com.cpmason.nebuhc.game.NeBManager;
 import com.cpmason.nebuhc.listeners.GreetingListener;
+import com.cpmason.nebuhc.listeners.WaitUntilBorderShrinksListener;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.event.Event;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -22,6 +26,7 @@ public class NeBUhc extends JavaPlugin {
         ConsoleCommandSender sender = getServer().getConsoleSender();
 
         sender.sendMessage(HANDLE + ENABLE_MSG);
+        sender.sendMessage(String.valueOf(Material.AIR.isBlock()));
 
         registerListeners();
 
@@ -40,7 +45,8 @@ public class NeBUhc extends JavaPlugin {
     private void registerListeners() {
 
         Listener[] listeners = {
-                new GreetingListener()
+                new GreetingListener(),
+                new WaitUntilBorderShrinksListener()
         };
 
         for (Listener listener : listeners) {
